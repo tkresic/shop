@@ -1,7 +1,14 @@
 # Shop Microservice
 
-Shop microservice written for Cash register application for restaurants & coffee shops.
+Shop microservice written in Lumen for Cash register application for restaurants & coffee shops.
 
-## Run the app and choose the platform (Linux or Web)
+## Set up the project
+
+- `composer install`
+- `cp .env.example .env` and update `.env` with database credentials
+- `php artisan migrate:refresh --seed`
+
+
+## Run the app
 
 `php -S localhost:8000 -t public`
