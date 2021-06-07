@@ -5,8 +5,7 @@ use Laravel\Lumen\Routing\Router;
 /** @var Router $router */
 
 $router->get('/', function () use ($router) {
-    return '<h2>' . env('APP_NAME', 'Shop Microservice') . '</h2>'
-        . 'v' . env('APP_VERSION', '0.1.0');
+    return view('index');
 });
 
 $router->group(['prefix' => 'api'], function () use ($router) {
