@@ -4,18 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Category extends Model
 {
-    use SoftDeletes;
-
     /**
-     * The attributes that aren't mass assignable. (All attributes are mass assignable.)
+     * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $guarded = [];
+    protected $fillable = ['name'];
 
     /**
      * The attributes which are excluded from every query.
@@ -30,7 +27,8 @@ class Category extends Model
      *
      * @return HasMany
      */
-    public function subcategories(): HasMany {
+    public function subcategories(): HasMany
+    {
         return $this->hasMany(Subcategory::class);
     }
 }

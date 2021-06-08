@@ -19,10 +19,9 @@ class CreateProductsTable extends Migration
             $table->string('name')->unique();
             $table->integer('price');
             $table->integer('cost')->nullable();
-            $table->integer('sku');
-            $table->string('image');
+            $table->string('sku')->unique();
+            $table->string('image')->nullable();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

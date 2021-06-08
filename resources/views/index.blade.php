@@ -71,6 +71,10 @@
         background-color: rgba(217, 83, 79, .5);
     }
 
+    tr.padding td:first-child {
+        padding-left: 50px;
+    }
+
 </style>
 
 <div class="container">
@@ -88,12 +92,44 @@
             <tr class="index">
                 <td>INDEX</td>
                 <td>
+                    <a href="{{ url('/api/dashboard') }}">/api/dashboard</a>
+                </td>
+                <td>GET</td>
+                <td>Proizvodi grupirani po potkategorijama i kategorijama</td>
+            </tr>
+            <tr>
+                <td>Kategorije</td>
+            </tr>
+            <tr class="padding index">
+                <td>INDEX</td>
+                <td>
                     <a href="{{ url('/api/categories') }}">/api/categories</a>
                 </td>
                 <td>GET</td>
                 <td>Lista svih kategorija</td>
             </tr>
-            <tr class="index">
+            <tr class="padding create">
+                <td>CREATE</td>
+                <td>/api/categories</td>
+                <td>POST</td>
+                <td>Kreira novu kategoriju</td>
+            </tr>
+            <tr class="padding update">
+                <td>UPDATE</td>
+                <td>/api/categories/:id</td>
+                <td>PUT</td>
+                <td>Ažurira kategoriju</td>
+            </tr>
+            <tr class="padding delete">
+                <td>DELETE</td>
+                <td>/api/categories/:id</td>
+                <td>DELETE</td>
+                <td>Briše kategoriju</td>
+            </tr>
+            <tr>
+                <td>Potkategorije</td>
+            </tr>
+            <tr class="padding index">
                 <td>INDEX</td>
                 <td>
                     <a href="{{ url('/api/subcategories') }}">/api/subcategories</a>
@@ -101,13 +137,58 @@
                 <td>GET</td>
                 <td>Lista svih potkategorija</td>
             </tr>
-            <tr class="index">
+            <tr class="padding create">
+                <td>CREATE</td>
+                <td>/api/subcategories</td>
+                <td>POST</td>
+                <td>Kreira novu potkategoriju</td>
+            </tr>
+            <tr class="padding update">
+                <td>UPDATE</td>
+                <td>/api/subcategories/:id</td>
+                <td>PUT</td>
+                <td>Ažurira potkategoriju</td>
+            </tr>
+            <tr class="padding delete">
+                <td>DELETE</td>
+                <td>/api/subcategories/:id</td>
+                <td>DELETE</td>
+                <td>Briše potkategoriju</td>
+            </tr>
+            <tr>
+                <td>Proizvodi</td>
+            </tr>
+            <tr class="padding index">
                 <td>INDEX</td>
                 <td>
                     <a href="{{ url('/api/products') }}">/api/products</a>
                 </td>
                 <td>GET</td>
                 <td>Lista svih proizvoda</td>
+            </tr>
+            <tr class="padding create">
+                <td>CREATE</td>
+                <td>/api/products</td>
+                <td>POST</td>
+                <td>Kreira novi proizvod</td>
+            </tr>
+            <tr class="padding read">
+                <td>READ</td>
+                <td>/api/products/:id</td>
+                <td>GET</td>
+                <td>Prikazuje informacije o proizvodu</td>
+            </tr>
+            <tr class="padding update">
+                <td>UPDATE</td>
+                <td>/api/products/:id</td>
+                <td>PUT</td>
+                <td>Ažurira proizvod</td>
+            </tr>
+            <tr class="padding delete">
+                <td>DELETE</td>
+                <td>/api/products/:id</td>
+                <td>DELETE</td>
+                <td>Briše proizvod</td>
             </tr>
         </tbody>
     </table>

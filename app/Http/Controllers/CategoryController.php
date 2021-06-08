@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\CategoryCollection;
 use App\Repositories\CategoryRepository;
-use App\Traits\ModelTrait;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -13,8 +12,6 @@ use Laravel\Lumen\Http\ResponseFactory;
 
 class CategoryController extends Controller
 {
-    use ModelTrait;
-
     private CategoryRepository $categoryRepository;
 
     public function __construct(CategoryRepository $categoryRepository)
@@ -49,19 +46,6 @@ class CategoryController extends Controller
     }
 
     /**
-     * Reads the category.
-     *
-     * @param $id
-     * @return Response|ResponseFactory
-     */
-    public function read(int $id)
-    {
-        $category = $this->categoryRepository->find($id);
-
-        return $category == null ? response(null, Response::HTTP_NOT_FOUND) : response($category, Response::HTTP_OK);
-    }
-
-    /**
      * Updates the category.
      *
      * @param Request $request
@@ -69,10 +53,11 @@ class CategoryController extends Controller
      * @return JsonResponse
      * @throws ValidationException
      */
-    public function update(Request $request, int $id): JsonResponse {
+    public function update(Request $request, int $id): JsonResponse
+    {
         $this->validateAttributes($request, $id);
 
-        $category = $this->categoryRepository->update($id, $request->all());
+        $category = $this->categoryRepository->update($request->input('category_id'), $request->all());
 
         return response()->json($category, Response::HTTP_OK);
     }
@@ -83,7 +68,8 @@ class CategoryController extends Controller
      * @param int $id
      * @return JsonResponse
      */
-    public function delete(int $id): JsonResponse {
+    public function delete(int $id): JsonResponse
+    {
         $category = $this->categoryRepository->find($id);
 
         if ($category == null) {
@@ -105,7 +91,7 @@ class CategoryController extends Controller
     private function validateAttributes(Request $request, int $id = -1)
     {
         $rules = [
-            'name' => "required|string|max:255|unique:categories,name,$id,id,deleted_at,NULL",
+            'name' => "required|string|max:255|unique:categories,name",
         ];
 
         if ($id != -1) {

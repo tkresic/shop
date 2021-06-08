@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Resources\ProductCollection;
 use App\Models\Product;
 use App\Repositories\ProductRepository;
-use App\Traits\ModelTrait;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -14,8 +13,6 @@ use Laravel\Lumen\Http\ResponseFactory;
 
 class ProductController extends Controller
 {
-    use ModelTrait;
-
     private ProductRepository $productRepository;
 
     public function __construct(ProductRepository $productRepository)
@@ -36,7 +33,6 @@ class ProductController extends Controller
         if ($resources) {
             $perPage = $request->input('per_page');
             $perPage = isset($perPage) && is_numeric($perPage) ? $perPage : 10;
-            //$search = $request->input('search');
             return new ProductCollection(Product::latest()->paginate($perPage));
         }
 
@@ -80,10 +76,11 @@ class ProductController extends Controller
      * @return JsonResponse
      * @throws ValidationException
      */
-    public function update(Request $request, int $id): JsonResponse {
+    public function update(Request $request, int $id): JsonResponse
+    {
         $this->validateAttributes($request, $id);
 
-        $product = $this->productRepository->update($id, $request->all());
+        $product = $this->productRepository->update($request->input('product_id'), $request->all());
 
         return response()->json($product, Response::HTTP_OK);
     }
@@ -94,7 +91,8 @@ class ProductController extends Controller
      * @param int $id
      * @return JsonResponse
      */
-    public function delete(int $id): JsonResponse {
+    public function delete(int $id): JsonResponse
+    {
         $product = $this->productRepository->find($id);
 
         if ($product == null) {
@@ -116,11 +114,11 @@ class ProductController extends Controller
     private function validateAttributes(Request $request, int $id = -1)
     {
         $rules = [
-            'name' => "required|string|max:255|unique:products,name,$id,id,deleted_at,NULL",
+            'name' => "required|string|max:255|unique:products,name," . $id,
+            'sku' => "required|string|unique:products,sku," . $id,
             'subcategory_id' => 'required|integer|exists:subcategories,id',
             'price' => 'required|integer|min:1',
             'cost' => 'nullable|integer',
-            'sku' => "required|string|unique:products,sku,$id,id,deleted_at,NULL",
         ];
 
         if ($id != -1) {

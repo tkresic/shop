@@ -18,7 +18,6 @@ class CreateSubcategoriesTable extends Migration
             $table->foreignId('category_id');
             $table->string('name')->unique();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

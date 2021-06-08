@@ -5,18 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Subcategory extends Model
 {
-    use SoftDeletes;
-
     /**
-     * The attributes that aren't mass assignable. (All attributes are mass assignable.)
+     * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $guarded = [];
+    protected $fillable = ['category_id', 'name'];
 
     /**
      * The attributes which are excluded from every query.
@@ -31,7 +28,8 @@ class Subcategory extends Model
      *
      * @return BelongsTo
      */
-    public function category(): BelongsTo {
+    public function category(): BelongsTo
+    {
         return $this->belongsTo(Category::class);
     }
 
@@ -40,7 +38,8 @@ class Subcategory extends Model
      *
      * @return HasMany
      */
-    public function products(): HasMany {
+    public function products(): HasMany
+    {
         return $this->hasMany(Product::class);
     }
 }
