@@ -96,7 +96,7 @@ class ProductController extends Controller
         $product = $this->productRepository->find($id);
 
         if ($product == null) {
-            return response()->json(null, Response::HTTP_NOT_FOUND);
+            return response()->json(false, Response::HTTP_NOT_FOUND);
         }
 
         $success = $this->productRepository->delete($id);

@@ -83,7 +83,7 @@ class SubcategoryController extends Controller
         $subcategory = $this->subcategoryRepository->find($id);
 
         if ($subcategory == null) {
-            return response()->json(null, Response::HTTP_NOT_FOUND);
+            return response()->json(false, Response::HTTP_NOT_FOUND);
         }
 
         $success = $this->subcategoryRepository->delete($id);

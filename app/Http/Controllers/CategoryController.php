@@ -73,7 +73,7 @@ class CategoryController extends Controller
         $category = $this->categoryRepository->find($id);
 
         if ($category == null) {
-            return response()->json(null, Response::HTTP_NOT_FOUND);
+            return response()->json(false, Response::HTTP_NOT_FOUND);
         }
 
         $success = $this->categoryRepository->delete($id);
