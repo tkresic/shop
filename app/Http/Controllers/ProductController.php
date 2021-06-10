@@ -80,7 +80,11 @@ class ProductController extends Controller
     {
         $this->validateAttributes($request, $id);
 
-        $product = $this->productRepository->update($request->input('product_id'), $request->all());
+        $product = $this->productRepository->update($id, $request->all());
+
+        if ($product == null) {
+            return response()->json(false, Response::HTTP_NOT_FOUND);
+        }
 
         return response()->json($product, Response::HTTP_OK);
     }
@@ -120,10 +124,6 @@ class ProductController extends Controller
             'price' => 'required|integer|min:1',
             'cost' => 'nullable|integer',
         ];
-
-        if ($id != -1) {
-            $rules['product_id'] = 'required|integer|exists:products,id';
-        }
 
         $this->validate($request, $rules);
     }

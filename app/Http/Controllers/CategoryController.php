@@ -57,7 +57,11 @@ class CategoryController extends Controller
     {
         $this->validateAttributes($request, $id);
 
-        $category = $this->categoryRepository->update($request->input('category_id'), $request->all());
+        $category = $this->categoryRepository->update($id, $request->all());
+
+        if ($category == null) {
+            return response()->json(false, Response::HTTP_NOT_FOUND);
+        }
 
         return response()->json($category, Response::HTTP_OK);
     }
@@ -91,12 +95,9 @@ class CategoryController extends Controller
     private function validateAttributes(Request $request, int $id = -1)
     {
         $rules = [
-            'name' => "required|string|max:255|unique:categories,name",
+            'name' => "required|string|max:255|unique:categories,name,$id",
         ];
 
-        if ($id != -1) {
-            $rules['category_id'] = 'required|integer|exists:categories,id';
-        }
 
         $this->validate($request, $rules);
     }

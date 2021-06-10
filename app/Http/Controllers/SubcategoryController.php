@@ -67,7 +67,11 @@ class SubcategoryController extends Controller
     {
         $this->validateAttributes($request, $id);
 
-        $subcategory = $this->subcategoryRepository->update($request->input('subcategory_id'), $request->all());
+        $subcategory = $this->subcategoryRepository->update($id, $request->all());
+
+        if ($subcategory == null) {
+            return response()->json(false, Response::HTTP_NOT_FOUND);
+        }
 
         return response()->json($subcategory, Response::HTTP_OK);
     }
@@ -101,13 +105,9 @@ class SubcategoryController extends Controller
     private function validateAttributes(Request $request, int $id = -1)
     {
         $rules = [
-            'name' => "required|string|max:255|unique:subcategories,name",
+            'name' => "required|string|max:255|unique:subcategories,name,$id",
             'category_id' => 'required|integer|exists:categories,id',
         ];
-
-        if ($id != -1) {
-            $rules['subcategory_id'] = 'required|integer|exists:subcategories,id';
-        }
 
         $this->validate($request, $rules);
     }
