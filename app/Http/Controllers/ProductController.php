@@ -28,15 +28,14 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        $resources = boolval($request->input('resources'));
+        $search = $request->input('search');
 
-        if ($resources) {
-            $perPage = $request->input('per_page');
-            $perPage = isset($perPage) && is_numeric($perPage) ? $perPage : 10;
-            return new ProductCollection(Product::latest()->paginate($perPage));
-        }
+        $products = Product::with('subcategory.category')
+            ->when($search && strlen($search), function ($query) use ($search) {
+                $query->where('name', 'LIKE', "%$search%");
+            })->get();
 
-        return response($this->productRepository->all(['subcategory.category']), Response::HTTP_OK);
+        return response($products, Response::HTTP_OK);
     }
 
     /**

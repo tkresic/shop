@@ -23,19 +23,10 @@ class SubcategoryController extends Controller
     /**
      * Lists all subcategories.
      *
-     * @param Request $request
      * @return SubcategoryCollection|Response|ResponseFactory
      */
-    public function index(Request $request)
+    public function index()
     {
-        $resources = boolval($request->input('resources'));
-
-        if ($resources) {
-            $perPage = $request->input('per_page');
-            $perPage = isset($perPage) && is_numeric($perPage) ? $perPage : 10;
-            return new SubcategoryCollection(Subcategory::latest()->paginate($perPage));
-        }
-
         return response($this->subcategoryRepository->all(['category']), Response::HTTP_OK);
     }
 
