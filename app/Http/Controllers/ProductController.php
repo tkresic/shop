@@ -34,7 +34,9 @@ class ProductController extends Controller
         $products = Product::with('subcategory.category')
             ->when($search && strlen($search), function ($query) use ($search) {
                 $query->where('name', 'LIKE', "%$search%");
-            })->get();
+            })
+            ->orderByDesc('id')
+            ->get();
 
         return response($products, Response::HTTP_OK);
     }
@@ -80,11 +82,28 @@ class ProductController extends Controller
     {
         $this->validateAttributes($request, $id);
 
-        $product = $this->productRepository->update($id, $request->all());
+        $product = $this->productRepository->find($id);
 
         if ($product == null) {
             return response()->json(false, Response::HTTP_NOT_FOUND);
         }
+
+        $data = $request->all();
+
+        if ($request->hasFile('file')) {
+            $imagePath = $request->file('file')->store('public/images');
+            $imageStoragePath = str_replace('public', '/storage', $imagePath);
+            $appURL = env('APP_URL');
+            $imagePath = $appURL . $imageStoragePath;
+            $data['image'] = $imagePath;
+
+            if ($product->image) {
+                $arr = explode('storage', $product->image);
+                Storage::delete('public' . $arr[1]);
+            }
+        }
+
+        $product = $this->productRepository->update($id, $data);
 
         return response()->json($product, Response::HTTP_OK);
     }
@@ -128,6 +147,7 @@ class ProductController extends Controller
             'subcategory_id' => 'required|integer|exists:subcategories,id',
             'price' => 'required|integer|min:1',
             'cost' => 'nullable|integer',
+            'file' => 'nullable|image|mimes:jpeg,jpg,png,bmp',
         ];
 
         $this->validate($request, $rules);
