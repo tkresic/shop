@@ -8,6 +8,7 @@ use App\Repositories\ProductRepository;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\ValidationException;
 use Laravel\Lumen\Http\ResponseFactory;
 
@@ -49,23 +50,23 @@ class ProductController extends Controller
     {
         $this->validateAttributes($request);
 
-        $product = $this->productRepository->create($request->all());
+        $data = $request->all();
+
+        if (!$request->hasFile('file')) {
+            $data['image'] = url('/') . '/storage/images/Placeholder.png';
+        } else {
+            $imagePath = $request->file('file')->store('public/images');
+            $imageStoragePath = str_replace('public', '/storage', $imagePath);
+            $appURL = env('APP_URL');
+            $imagePath = $appURL . $imageStoragePath;
+            $data['image'] = $imagePath;
+        }
+
+        $product = $this->productRepository->create($data);
 
         return response($product, Response::HTTP_OK);
     }
 
-    /**
-     * Reads the product.
-     *
-     * @param $id
-     * @return Response|ResponseFactory
-     */
-    public function read(int $id)
-    {
-        $product = $this->productRepository->find($id);
-
-        return $product == null ? response(null, Response::HTTP_NOT_FOUND) : response($product, Response::HTTP_OK);
-    }
 
     /**
      * Updates the product.
@@ -97,6 +98,11 @@ class ProductController extends Controller
     public function delete(int $id): JsonResponse
     {
         $product = $this->productRepository->find($id);
+
+        if ($product->image) {
+            $arr = explode('storage', $product->image);
+            Storage::delete('public' . $arr[1]);
+        }
 
         if ($product == null) {
             return response()->json(false, Response::HTTP_NOT_FOUND);
