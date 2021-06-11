@@ -172,16 +172,10 @@
                 <td>POST</td>
                 <td>Kreira novi proizvod</td>
             </tr>
-            <tr class="padding read">
-                <td>READ</td>
-                <td>/api/products/:id</td>
-                <td>GET</td>
-                <td>Prikazuje informacije o proizvodu</td>
-            </tr>
             <tr class="padding update">
                 <td>UPDATE</td>
                 <td>/api/products/:id</td>
-                <td>PUT</td>
+                <td>POST</td>
                 <td>Ažurira proizvod</td>
             </tr>
             <tr class="padding delete">
