@@ -97,7 +97,7 @@ class ProductController extends Controller
             $imagePath = $appURL . $imageStoragePath;
             $data['image'] = $imagePath;
 
-            if ($product->image) {
+            if ($product->image && strpos($product->image, 'Placeholder.png') === false) {
                 $arr = explode('storage', $product->image);
                 Storage::delete('public' . $arr[1]);
             }
@@ -118,7 +118,8 @@ class ProductController extends Controller
     {
         $product = $this->productRepository->find($id);
 
-        if ($product->image) {
+
+        if ($product->image && strpos($product->image, 'Placeholder.png') === false) {
             $arr = explode('storage', $product->image);
             Storage::delete('public' . $arr[1]);
         }
