@@ -91,7 +91,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Mozzarella',
             'price' => 3350,
             'cost' => 0,
-            'sku' => '10',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Mozzarella.png'
         ]);
         Product::create([
@@ -99,7 +99,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Proljetne rolice',
             'price' => 2250,
             'cost' => 0,
-            'sku' => '11',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'ProljetneRolice.png'
         ]);
         Product::create([
@@ -107,7 +107,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Pohani tofu',
             'price' => 2750,
             'cost' => 0,
-            'sku' => '12',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'PohaniTofu.png'
         ]);
         Product::create([
@@ -115,7 +115,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Caprese',
             'price' => 2250,
             'cost' => 0,
-            'sku' => '13',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Caprese.png'
         ]);
         Product::create([
@@ -123,7 +123,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Capricciosa',
             'price' => 2500,
             'cost' => 0,
-            'sku' => '14',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Capricciosa.png'
         ]);
         Product::create([
@@ -131,7 +131,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Grčka',
             'price' => 3000,
             'cost' => 0,
-            'sku' => '15',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Grcka.png'
         ]);
         Product::create([
@@ -139,7 +139,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Tuna',
             'price' => 3250,
             'cost' => 0,
-            'sku' => '16',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Tuna.png'
         ]);
         Product::create([
@@ -147,7 +147,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Cezar',
             'price' => 3500,
             'cost' => 0,
-            'sku' => '17',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Cezar.png'
         ]);
         Product::create([
@@ -155,7 +155,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Zelena salata',
             'price' => 2750,
             'cost' => 0,
-            'sku' => '18',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'ZelenaSalata.png'
         ]);
         Product::create([
@@ -163,7 +163,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Miješana salata',
             'price' => 2000,
             'cost' => 0,
-            'sku' => '19',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'MijesanaSalata.png'
         ]);
         Product::create([
@@ -171,7 +171,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Matovilac salata',
             'price' => 2500,
             'cost' => 0,
-            'sku' => '20',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'MatovilacSalata.png'
         ]);
         Product::create([
@@ -179,7 +179,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Rikula salata',
             'price' => 2900,
             'cost' => 0,
-            'sku' => '21',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'RikulaSalata.png'
         ]);
         Product::create([
@@ -187,7 +187,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Kupus salata',
             'price' => 1800,
             'cost' => 0,
-            'sku' => '22',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'KupusSalata.png'
         ]);
         Product::create([
@@ -195,7 +195,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Šopska salata',
             'price' => 2200,
             'cost' => 0,
-            'sku' => '23',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'SopskaSalata.png'
         ]);
         Product::create([
@@ -203,7 +203,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Pizza',
             'price' => 4500,
             'cost' => 0,
-            'sku' => '24',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Pizza.png'
         ]);
         Product::create([
@@ -211,7 +211,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Spaghetti',
             'price' => 3000,
             'cost' => 0,
-            'sku' => '25',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Spaghetti.png'
         ]);
         Product::create([
@@ -219,7 +219,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Jastog',
             'price' => 25000,
             'cost' => 0,
-            'sku' => '26',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Jastog.png'
         ]);
         Product::create([
@@ -227,7 +227,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Lazanje',
             'price' => 3500,
             'cost' => 0,
-            'sku' => '27',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Lazanje.png'
         ]);
         Product::create([
@@ -235,7 +235,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Grill piletina',
             'price' => 4700,
             'cost' => 0,
-            'sku' => '28',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'GrillPiletina.png'
         ]);
         Product::create([
@@ -243,7 +243,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Biftek',
             'price' => 8500,
             'cost' => 0,
-            'sku' => '29',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Biftek.png'
         ]);
         Product::create([
@@ -251,7 +251,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Bečki odrezak',
             'price' => 4250,
             'cost' => 0,
-            'sku' => '30',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'BeckiOdrezak.png'
         ]);
         Product::create([
@@ -259,7 +259,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Pureći cordon blue',
             'price' => 3750,
             'cost' => 0,
-            'sku' => '31',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'PureciCordonBlue.png'
         ]);
         Product::create([
@@ -267,7 +267,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Lignje na žaru',
             'price' => 4500,
             'cost' => 0,
-            'sku' => '32',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'LignjeNaZaru.png'
         ]);
         Product::create([
@@ -275,7 +275,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Pohane lignje',
             'price' => 4000,
             'cost' => 0,
-            'sku' => '33',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'PohaneLignje.png'
         ]);
         Product::create([
@@ -283,7 +283,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Punjene lignje',
             'price' => 3500,
             'cost' => 0,
-            'sku' => '34',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'PunjeneLignje.png'
         ]);
         Product::create([
@@ -291,7 +291,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Svinjski medaljoni',
             'price' => 4000,
             'cost' => 0,
-            'sku' => '35',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'SvinjskiMedaljoni.png'
         ]);
         Product::create([
@@ -299,7 +299,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Svinjski ražnjići',
             'price' => 4500,
             'cost' => 0,
-            'sku' => '36',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'SvinjskiRaznjici.png'
         ]);
         Product::create([
@@ -307,7 +307,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Pileći ražnjići',
             'price' => 4750,
             'cost' => 0,
-            'sku' => '37',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'PileciRaznjici.png'
         ]);
         Product::create([
@@ -315,7 +315,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Gurmanska piletina',
             'price' => 4800,
             'cost' => 0,
-            'sku' => '38',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'GurmanskaPiletina.jpeg'
         ]);
         Product::create([
@@ -323,7 +323,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Pureći steak',
             'price' => 5750,
             'cost' => 0,
-            'sku' => '39',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'PureciSteak.jpeg'
         ]);
         Product::create([
@@ -331,7 +331,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Ćevapi u lepinji m.',
             'price' => 3500,
             'cost' => 0,
-            'sku' => '40',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Cevapi.png'
         ]);
         Product::create([
@@ -339,7 +339,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Ćevapi u lepinji v.',
             'price' => 4000,
             'cost' => 0,
-            'sku' => '41',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Cevapi.png'
         ]);
         Product::create([
@@ -347,7 +347,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Miješano meso',
             'price' => 6250,
             'cost' => 0,
-            'sku' => '42',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'MijesanoMeso.png'
         ]);
         Product::create([
@@ -355,7 +355,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Pljeskavica',
             'price' => 4250,
             'cost' => 0,
-            'sku' => '43',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Pljeskavica.png'
         ]);
         Product::create([
@@ -363,7 +363,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Plata m.',
             'price' => 8000,
             'cost' => 0,
-            'sku' => '44',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Plata.png'
         ]);
         Product::create([
@@ -371,7 +371,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Plata v.',
             'price' => 10000,
             'cost' => 0,
-            'sku' => '45',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Plata.png'
         ]);
         Product::create([
@@ -379,7 +379,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Teleći naravni',
             'price' => 4500,
             'cost' => 0,
-            'sku' => '46',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'TeleciNaravni.jpeg'
         ]);
         Product::create([
@@ -387,7 +387,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Riba sa žara',
             'price' => 12000,
             'cost' => 0,
-            'sku' => '47',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'RibaSaZara.png'
         ]);
         Product::create([
@@ -395,7 +395,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Ramstek',
             'price' => 8750,
             'cost' => 0,
-            'sku' => '48',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Ramstek.png'
         ]);
         Product::create([
@@ -403,7 +403,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Tiramisu',
             'price' => 2750,
             'cost' => 0,
-            'sku' => '49',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Tiramisu.png'
         ]);
         Product::create([
@@ -411,7 +411,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Palaćinke',
             'price' => 3250,
             'cost' => 0,
-            'sku' => '50',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Palacinke.png'
         ]);
         Product::create([
@@ -419,7 +419,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Cheese cake',
             'price' => 3500,
             'cost' => 0,
-            'sku' => '51',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'CheeseCake.png'
         ]);
         Product::create([
@@ -427,7 +427,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Voćna salata',
             'price' => 3300,
             'cost' => 0,
-            'sku' => '52',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'VocnaSalata.png'
         ]);
         Product::create([
@@ -435,7 +435,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Banana split',
             'price' => 3750,
             'cost' => 0,
-            'sku' => '53',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'BananaSplit.png'
         ]);
         Product::create([
@@ -443,7 +443,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Voćni kup',
             'price' => 3600,
             'cost' => 0,
-            'sku' => '54',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'VocniKup.png'
         ]);
         Product::create([
@@ -451,7 +451,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Vanilija kup',
             'price' => 4750,
             'cost' => 0,
-            'sku' => '55',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'VanilijaKup.png'
         ]);
         Product::create([
@@ -459,7 +459,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Panna cotta',
             'price' => 4500,
             'cost' => 0,
-            'sku' => '56',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'PannaCotta.png'
         ]);
         Product::create([
@@ -467,7 +467,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Čokoladna čarolija',
             'price' => 5200,
             'cost' => 0,
-            'sku' => '57',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'CokoladnaCarolija.jpeg'
         ]);
         Product::create([
@@ -475,7 +475,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Ožujsko',
             'price' => 1200,
             'cost' => 0,
-            'sku' => '58',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Ozujsko.png'
         ]);
         Product::create([
@@ -483,7 +483,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Stella Artois',
             'price' => 1400,
             'cost' => 0,
-            'sku' => '59',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'StellaArtois.png'
         ]);
         Product::create([
@@ -491,7 +491,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Beck\'s',
             'price' => 1300,
             'cost' => 0,
-            'sku' => '60',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Becks.png'
         ]);
         Product::create([
@@ -499,7 +499,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Tomislav',
             'price' => 1700,
             'cost' => 0,
-            'sku' => '61',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Tomislav.png'
         ]);
         Product::create([
@@ -507,7 +507,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Karlovačko',
             'price' => 1200,
             'cost' => 0,
-            'sku' => '62',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Karlovacko.png'
         ]);
         Product::create([
@@ -515,7 +515,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Heineken',
             'price' => 1000,
             'cost' => 0,
-            'sku' => '63',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Heineken.png'
         ]);
         Product::create([
@@ -523,7 +523,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Staropramen',
             'price' => 1500,
             'cost' => 0,
-            'sku' => '64',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Staropramen.png'
         ]);
         Product::create([
@@ -531,7 +531,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Nikšićko',
             'price' => 1400,
             'cost' => 0,
-            'sku' => '65',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Niksicko.png'
         ]);
         Product::create([
@@ -539,7 +539,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Stari lisac',
             'price' => 1100,
             'cost' => 0,
-            'sku' => '66',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'StariLisac.png'
         ]);
         Product::create([
@@ -547,7 +547,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Kozel',
             'price' => 1600,
             'cost' => 0,
-            'sku' => '67',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Kozel.png'
         ]);
         Product::create([
@@ -555,7 +555,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Paulaner',
             'price' => 2200,
             'cost' => 0,
-            'sku' => '68',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Paulaner.png'
         ]);
         Product::create([
@@ -563,7 +563,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Zlatni medvjed',
             'price' => 2000,
             'cost' => 0,
-            'sku' => '69',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'ZlatniMedvjed.png'
         ]);
         Product::create([
@@ -571,7 +571,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Grička vještica',
             'price' => 2500,
             'cost' => 0,
-            'sku' => '70',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'GrickaVjestica.png'
         ]);
         Product::create([
@@ -579,7 +579,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Crna kraljica',
             'price' => 2350,
             'cost' => 0,
-            'sku' => '71',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'CrnaKraljica.png'
         ]);
         Product::create([
@@ -587,7 +587,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Plavac mali',
             'price' => 7500,
             'cost' => 0,
-            'sku' => '72',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'PlavacMali.png'
         ]);
         Product::create([
@@ -595,7 +595,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Cabernet sauvignon',
             'price' => 12000,
             'cost' => 0,
-            'sku' => '73',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'CabernetSauvignon.png'
         ]);
         Product::create([
@@ -603,7 +603,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Graševina',
             'price' => 6000,
             'cost' => 0,
-            'sku' => '74',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Grasevina.png'
         ]);
         Product::create([
@@ -611,7 +611,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Pinot sivi',
             'price' => 7000,
             'cost' => 0,
-            'sku' => '75',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'PinotSivi.png'
         ]);
         Product::create([
@@ -619,7 +619,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Chardonnay',
             'price' => 10000,
             'cost' => 0,
-            'sku' => '76',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Chardonnay.png'
         ]);
         Product::create([
@@ -627,7 +627,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Dingač',
             'price' => 9500,
             'cost' => 0,
-            'sku' => '77',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Dingac.png'
         ]);
         Product::create([
@@ -635,7 +635,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Pošip',
             'price' => 10500,
             'cost' => 0,
-            'sku' => '78',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Posip.png'
         ]);
         Product::create([
@@ -643,7 +643,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Grk',
             'price' => 9700,
             'cost' => 0,
-            'sku' => '79',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Grk.png'
         ]);
         Product::create([
@@ -651,7 +651,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Babić',
             'price' => 8250,
             'cost' => 0,
-            'sku' => '80',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Babic.png'
         ]);
         Product::create([
@@ -659,7 +659,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Vugava',
             'price' => 7750,
             'cost' => 0,
-            'sku' => '81',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Vugava.png'
         ]);
         Product::create([
@@ -667,7 +667,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Rukatac',
             'price' => 8150,
             'cost' => 0,
-            'sku' => '82',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Rukatac.png'
         ]);
         Product::create([
@@ -675,7 +675,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Jägermeister',
             'price' => 2500,
             'cost' => 0,
-            'sku' => '83',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Jagermeister.png'
         ]);
         Product::create([
@@ -683,7 +683,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Amaro',
             'price' => 2200,
             'cost' => 0,
-            'sku' => '84',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Amaro.png'
         ]);
         Product::create([
@@ -691,7 +691,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Lavov',
             'price' => 2000,
             'cost' => 0,
-            'sku' => '85',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Lavov.png'
         ]);
         Product::create([
@@ -699,7 +699,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Pelinkovac',
             'price' => 1450,
             'cost' => 0,
-            'sku' => '86',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Pelinkovac.png'
         ]);
         Product::create([
@@ -707,7 +707,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Southern Comfort',
             'price' => 2450,
             'cost' => 0,
-            'sku' => '87',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'SouthernComfort.png'
         ]);
         Product::create([
@@ -715,7 +715,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Campari',
             'price' => 1900,
             'cost' => 0,
-            'sku' => '88',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Campari.png'
         ]);
         Product::create([
@@ -723,7 +723,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Vigor vodka',
             'price' => 1750,
             'cost' => 0,
-            'sku' => '89',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'VigorVodka.png'
         ]);
         Product::create([
@@ -731,7 +731,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Finlandia vodka',
             'price' => 2000,
             'cost' => 0,
-            'sku' => '90',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'FinlandiaVodka.png'
         ]);
         Product::create([
@@ -739,7 +739,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Bacardi',
             'price' => 2350,
             'cost' => 0,
-            'sku' => '91',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Bacardi.png'
         ]);
         Product::create([
@@ -747,7 +747,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Johnnie Walker',
             'price' => 2650,
             'cost' => 0,
-            'sku' => '92',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'JohnnieWalker.png'
         ]);
         Product::create([
@@ -755,7 +755,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Jack Daniel\'s',
             'price' => 2200,
             'cost' => 0,
-            'sku' => '93',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'JackDaniels.png'
         ]);
         Product::create([
@@ -763,7 +763,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Ballantines',
             'price' => 2100,
             'cost' => 0,
-            'sku' => '94',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Ballantines.png'
         ]);
         Product::create([
@@ -771,7 +771,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Chivas',
             'price' => 2600,
             'cost' => 0,
-            'sku' => '95',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Chivas.png'
         ]);
         Product::create([
@@ -779,7 +779,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Stock',
             'price' => 1750,
             'cost' => 0,
-            'sku' => '96',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Stock.png'
         ]);
         Product::create([
@@ -787,7 +787,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Viljamovka',
             'price' => 1400,
             'cost' => 0,
-            'sku' => '97',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Viljamovka.png'
         ]);
         Product::create([
@@ -795,7 +795,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Travarica',
             'price' => 1400,
             'cost' => 0,
-            'sku' => '98',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Travarica.png'
         ]);
         Product::create([
@@ -803,7 +803,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Loza',
             'price' => 1400,
             'cost' => 0,
-            'sku' => '99',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Loza.png'
         ]);
         Product::create([
@@ -811,7 +811,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Coca Cola',
             'price' => 800,
             'cost' => 0,
-            'sku' => '100',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'CocaCola.png'
         ]);
         Product::create([
@@ -819,7 +819,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Fanta',
             'price' => 900,
             'cost' => 0,
-            'sku' => '101',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Fanta.png'
         ]);
         Product::create([
@@ -827,7 +827,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Cockta',
             'price' => 1200,
             'cost' => 0,
-            'sku' => '102',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Cockta.png'
         ]);
         Product::create([
@@ -835,7 +835,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Red Bull',
             'price' => 1800,
             'cost' => 0,
-            'sku' => '103',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'RedBull.png'
         ]);
         Product::create([
@@ -843,7 +843,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Ledeni čaj',
             'price' => 1400,
             'cost' => 0,
-            'sku' => '104',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'LedeniCaj.png'
         ]);
         Product::create([
@@ -851,7 +851,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Sprite',
             'price' => 1100,
             'cost' => 0,
-            'sku' => '105',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Sprite.png'
         ]);
         Product::create([
@@ -859,7 +859,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Schweppes',
             'price' => 1600,
             'cost' => 0,
-            'sku' => '106',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Schweppes.png'
         ]);
         Product::create([
@@ -867,7 +867,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Orangina',
             'price' => 1600,
             'cost' => 0,
-            'sku' => '107',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Orangina.png'
         ]);
         Product::create([
@@ -875,7 +875,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Mineralna voda',
             'price' => 1000,
             'cost' => 0,
-            'sku' => '108',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'MineralnaVoda.png'
         ]);
         Product::create([
@@ -883,7 +883,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Negazirana voda',
             'price' => 800,
             'cost' => 0,
-            'sku' => '109',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'NegaziranaVoda.png'
         ]);
         Product::create([
@@ -891,7 +891,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Prirodna limunada',
             'price' => 2000,
             'cost' => 0,
-            'sku' => '110',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'PrirodnaLimunada.png'
         ]);
         Product::create([
@@ -899,7 +899,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Cedevita',
             'price' => 1200,
             'cost' => 0,
-            'sku' => '111',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Cedevita.png'
         ]);
         Product::create([
@@ -907,7 +907,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Cijeđena naranča',
             'price' => 2200,
             'cost' => 0,
-            'sku' => '112',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'CijedenaNaranca.png'
         ]);
         Product::create([
@@ -915,7 +915,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Kava s mlijekom m.',
             'price' => 900,
             'cost' => 0,
-            'sku' => '113',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Kava.png'
         ]);
         Product::create([
@@ -923,7 +923,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Kava s mlijekom v.',
             'price' => 1000,
             'cost' => 0,
-            'sku' => '114',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Kava.png'
         ]);
         Product::create([
@@ -931,7 +931,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Espresso',
             'price' => 700,
             'cost' => 0,
-            'sku' => '115',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Espresso.png'
         ]);
         Product::create([
@@ -939,7 +939,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Cappuccino',
             'price' => 1200,
             'cost' => 0,
-            'sku' => '116',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Cappuccino.png'
         ]);
         Product::create([
@@ -947,7 +947,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Bijela kava',
             'price' => 1400,
             'cost' => 0,
-            'sku' => '117',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'BijelaKava.png'
         ]);
         Product::create([
@@ -955,7 +955,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Kava sa šlagom',
             'price' => 1100,
             'cost' => 0,
-            'sku' => '118',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'KavaSaSlagom.png'
         ]);
         Product::create([
@@ -963,7 +963,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Nescafé',
             'price' => 1400,
             'cost' => 0,
-            'sku' => '119',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Nescafe.png'
         ]);
         Product::create([
@@ -971,7 +971,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Kakao',
             'price' => 1600,
             'cost' => 0,
-            'sku' => '120',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Kakao.png'
         ]);
         Product::create([
@@ -979,7 +979,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Kakao sa šlagom',
             'price' => 1800,
             'cost' => 0,
-            'sku' => '121',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'KakaoSaSlagom.png'
         ]);
         Product::create([
@@ -987,7 +987,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Topla čokolada',
             'price' => 2200,
             'cost' => 0,
-            'sku' => '122',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'ToplaCokolada.png'
         ]);
         Product::create([
@@ -995,7 +995,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Izbor čajeva',
             'price' => 1400,
             'cost' => 0,
-            'sku' => '123',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'IzborCajeva.jpg'
         ]);
         Product::create([
@@ -1003,7 +1003,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Marlboro',
             'price' => 3300,
             'cost' => 0,
-            'sku' => '124',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Marlboro.png'
         ]);
         Product::create([
@@ -1011,7 +1011,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Dunhill',
             'price' => 3100,
             'cost' => 0,
-            'sku' => '125',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'Dunhill.png'
         ]);
     }
