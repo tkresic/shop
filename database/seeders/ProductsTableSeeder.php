@@ -19,7 +19,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Bruschette mix',
             'price' => 2500,
             'cost' => 0,
-            'sku' => '1',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'BruschetteMix.png'
         ]);
         Product::create([
@@ -27,7 +27,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Krumpir pekarski',
             'price' => 3500,
             'cost' => 0,
-            'sku' => '2',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'KrumpirPekarski.png'
         ]);
         Product::create([
@@ -35,7 +35,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Grill povrće',
             'price' => 3000,
             'cost' => 0,
-            'sku' => '3',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'GrillPovrce.png'
         ]);
         Product::create([
@@ -43,7 +43,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Pršut dalmatinski',
             'price' => 3750,
             'cost' => 0,
-            'sku' => '4',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'PrsutDalmatinski.png'
         ]);
         Product::create([
@@ -51,7 +51,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Slavonski kulen 100g',
             'price' => 2850,
             'cost' => 0,
-            'sku' => '5',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'SlavonskiKulen.png'
         ]);
         Product::create([
@@ -59,7 +59,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Paški sir',
             'price' => 3150,
             'cost' => 0,
-            'sku' => '6',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'PaskiSir.png'
         ]);
         Product::create([
@@ -67,7 +67,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Ribarski tanjur',
             'price' => 4750,
             'cost' => 0,
-            'sku' => '7',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'RibarskiTanjur.png'
         ]);
         Product::create([
@@ -75,7 +75,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Salata od hobotnice',
             'price' => 5150,
             'cost' => 0,
-            'sku' => '8',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'SalataOdHobotnice.png'
         ]);
         Product::create([
@@ -83,7 +83,7 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Ražnjići od gambera',
             'price' => 2850,
             'cost' => 0,
-            'sku' => '9',
+            'sku' => substr(md5(rand()), 0, 6),
             'image' => url('/') . '/storage/images/' . 'RaznjiciOdGambera.png'
         ]);
         Product::create([
