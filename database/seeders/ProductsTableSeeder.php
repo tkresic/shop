@@ -30,9 +30,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 1,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Krumpir pekarski',
             'price' => 3500,
@@ -56,9 +56,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 1,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Pršut dalmatinski',
             'price' => 3750,
@@ -82,9 +82,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 1,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Paški sir',
             'price' => 3150,
@@ -108,9 +108,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 1,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Salata od hobotnice',
             'price' => 5150,
@@ -134,9 +134,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 1,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Mozzarella',
             'price' => 3350,
@@ -160,9 +160,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 1,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Pohani tofu',
             'price' => 2750,
@@ -186,9 +186,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 2,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Capricciosa',
             'price' => 2500,
@@ -212,9 +212,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 2,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Tuna',
             'price' => 3250,
@@ -238,9 +238,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 2,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Zelena salata',
             'price' => 2750,
@@ -264,9 +264,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 2,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Matovilac salata',
             'price' => 2500,
@@ -290,9 +290,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 2,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Kupus salata',
             'price' => 1800,
@@ -316,9 +316,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 3,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Pizza',
             'price' => 4500,
@@ -342,9 +342,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 3,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Jastog',
             'price' => 25000,
@@ -368,9 +368,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 3,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Grill piletina',
             'price' => 4700,
@@ -394,9 +394,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 3,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Bečki odrezak',
             'price' => 4250,
@@ -420,9 +420,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 3,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Lignje na žaru',
             'price' => 4500,
@@ -446,9 +446,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 3,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Punjene lignje',
             'price' => 3500,
@@ -472,9 +472,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 3,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Svinjski ražnjići',
             'price' => 4500,
@@ -498,9 +498,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 3,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Gurmanska piletina',
             'price' => 4800,
@@ -524,9 +524,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 3,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Ćevapi u lepinji m.',
             'price' => 3500,
@@ -550,9 +550,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 3,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Miješano meso',
             'price' => 6250,
@@ -576,9 +576,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 3,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Plata m.',
             'price' => 8000,
@@ -602,9 +602,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 3,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Teleći naravni',
             'price' => 4500,
@@ -628,9 +628,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 3,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Ramstek',
             'price' => 8750,
@@ -654,9 +654,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 4,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Palaćinke',
             'price' => 3250,
@@ -680,9 +680,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 4,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Voćna salata',
             'price' => 3300,
@@ -706,9 +706,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 4,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Voćni kup',
             'price' => 3600,
@@ -732,9 +732,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 4,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Panna cotta',
             'price' => 4500,
@@ -758,9 +758,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 5,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Ožujsko',
             'price' => 1200,
@@ -784,9 +784,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 5,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Beck\'s',
             'price' => 1300,
@@ -810,9 +810,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 5,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Karlovačko',
             'price' => 1200,
@@ -836,9 +836,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 5,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Staropramen',
             'price' => 1500,
@@ -862,9 +862,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 5,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Stari lisac',
             'price' => 1100,
@@ -888,9 +888,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 5,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Paulaner',
             'price' => 2200,
@@ -914,9 +914,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 5,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Grička vještica',
             'price' => 2500,
@@ -940,9 +940,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 6,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Plavac mali',
             'price' => 7500,
@@ -966,9 +966,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 6,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Graševina',
             'price' => 6000,
@@ -992,9 +992,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 6,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Chardonnay',
             'price' => 10000,
@@ -1018,9 +1018,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 6,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Pošip',
             'price' => 10500,
@@ -1044,9 +1044,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 6,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Babić',
             'price' => 8250,
@@ -1070,9 +1070,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 6,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Rukatac',
             'price' => 8150,
@@ -1096,9 +1096,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 7,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Amaro',
             'price' => 2200,
@@ -1122,9 +1122,9 @@ class ProductsTableSeeder extends Seeder
         Product::create([
             'subcategory_id' => 7,
             'tax' => [
-                'id' => 1,
-                'name' => 'PDV 25%',
-                'amount' => 25
+                'id' => 2,
+                'name' => 'PDV 10%',
+                'amount' => 10
             ],
             'name' => 'Pelinkovac',
             'price' => 1450,
