@@ -16,6 +16,7 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->foreignId('subcategory_id')->constrained()->onDelete('cascade');
+            $table->json('tax');
             $table->string('name')->unique();
             $table->integer('price');
             $table->integer('cost')->nullable();

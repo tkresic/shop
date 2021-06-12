@@ -64,6 +64,9 @@ class ProductController extends Controller
             $data['image'] = $imagePath;
         }
 
+        $data['tax']['id'] = (int) $data['tax']['id'];
+        $data['tax']['amount'] = (int) $data['tax']['amount'];
+
         $product = $this->productRepository->create($data);
 
         return response($product, Response::HTTP_OK);
@@ -102,6 +105,9 @@ class ProductController extends Controller
                 Storage::delete('public' . $arr[1]);
             }
         }
+
+        $data['tax']['id'] = (int) $data['tax']['id'];
+        $data['tax']['amount'] = (int) $data['tax']['amount'];
 
         $product = $this->productRepository->update($id, $data);
 
@@ -146,6 +152,10 @@ class ProductController extends Controller
             'name' => "required|string|max:255|unique:products,name," . $id,
             'sku' => "required|string|unique:products,sku," . $id,
             'subcategory_id' => 'required|integer|exists:subcategories,id',
+            'tax' => 'required|array',
+            'tax.id' => 'required|integer',
+            'tax.name' => 'required|string|max:255',
+            'tax.amount' => 'required|integer|between:1,100',
             'price' => 'required|integer|min:1',
             'cost' => 'nullable|integer',
             'file' => 'nullable|image|mimes:jpeg,jpg,png,bmp',

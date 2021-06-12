@@ -12,7 +12,7 @@ class Product extends Model
      *
      * @var array
      */
-    protected $fillable = ['subcategory_id', 'name', 'price', 'cost', 'sku', 'image'];
+    protected $fillable = ['subcategory_id', 'tax', 'name', 'price', 'cost', 'sku', 'image'];
 
     /**
      * The attributes which are excluded from every query.
@@ -22,11 +22,21 @@ class Product extends Model
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
 
     /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'tax' => 'array'
+    ];
+
+    /**
      * Product belongs to Subcategory.
      *
      * @return BelongsTo
      */
-    public function subcategory(): BelongsTo {
+    public function subcategory(): BelongsTo
+    {
         return $this->belongsTo(Subcategory::class);
     }
 }
