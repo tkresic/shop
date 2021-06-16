@@ -1,0 +1,93 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Shop API",
+        "contact": {
+            "name": "Toni Krešić",
+            "email": "tonikresic1997@gmail.com"
+        },
+        "version": "0.1.0"
+    },
+    "paths": {
+        "/api/categories": {
+            "get": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Categories index route.",
+                "description": "Get all Categories",
+                "operationId": "App\\Http\\Controllers\\CategoryController::index",
+                "responses": {
+                    "200": {
+                        "description": "Category",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/dashboard": {
+            "get": {
+                "tags": [
+                    "Dashboard"
+                ],
+                "summary": "Returns grouped products.",
+                "description": "Get grouped Products",
+                "operationId": "App\\Http\\Controllers\\DashboardController::index",
+                "responses": {
+                    "200": {
+                        "description": "Dashboard",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/products": {
+            "get": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Products index route.",
+                "description": "Get all Products",
+                "operationId": "App\\Http\\Controllers\\ProductController::index",
+                "responses": {
+                    "200": {
+                        "description": "Product",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/subcategories": {
+            "get": {
+                "tags": [
+                    "Subcategories"
+                ],
+                "summary": "Subcategories index route.",
+                "description": "Get all Subcategories",
+                "operationId": "App\\Http\\Controllers\\SubcategoryController::index",
+                "responses": {
+                    "200": {
+                        "description": "Subcategory",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

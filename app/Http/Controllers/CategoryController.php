@@ -20,9 +20,19 @@ class CategoryController extends Controller
     }
 
     /**
-     * Lists all categories.
+     * Categories index route.
      *
-     * @return CategoryCollection|Response|ResponseFactory
+     * @OA\Get(
+     *      path="/api/categories",
+     *      description="Get all Categories",
+     *      tags={"Categories"},
+     *      @OA\Response(
+     *          response="200",
+     *          description="Category",
+     *          @OA\JsonContent()
+     *      ),
+     * )
+     * @return JsonResponse|ResponseFactory
      */
     public function index()
     {

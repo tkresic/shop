@@ -21,9 +21,19 @@ class SubcategoryController extends Controller
     }
 
     /**
-     * Lists all subcategories.
+     * Subcategories index route.
      *
-     * @return SubcategoryCollection|Response|ResponseFactory
+     * @OA\Get(
+     *      path="/api/subcategories",
+     *      description="Get all Subcategories",
+     *      tags={"Subcategories"},
+     *      @OA\Response(
+     *          response="200",
+     *          description="Subcategory",
+     *          @OA\JsonContent()
+     *      ),
+     * )
+     * @return JsonResponse|ResponseFactory
      */
     public function index()
     {

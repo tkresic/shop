@@ -22,10 +22,20 @@ class ProductController extends Controller
     }
 
     /**
-     * Lists all products.
+     * Products index route.
      *
+     * @OA\Get(
+     *      path="/api/products",
+     *      description="Get all Products",
+     *      tags={"Products"},
+     *      @OA\Response(
+     *          response="200",
+     *          description="Product",
+     *          @OA\JsonContent()
+     *      ),
+     * )
      * @param Request $request
-     * @return ProductCollection|Response|ResponseFactory
+     * @return JsonResponse|ResponseFactory
      */
     public function index(Request $request)
     {
