@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\SubcategoryCollection;
-use App\Models\Subcategory;
 use App\Repositories\SubcategoryRepository;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
