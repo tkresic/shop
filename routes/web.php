@@ -8,8 +8,7 @@ $router->get('/', function () use ($router) {
     return view('index');
 });
 
-$router->group(['prefix' => 'api'], function () use ($router) {
-
+$router->group(['prefix' => 'api', 'middleware' => 'auth'], function () use ($router) {
     $router->get('/dashboard', 'DashboardController@index');
 
     $router->group(['prefix' => 'categories'], function () use ($router) {
