@@ -61,6 +61,7 @@ $app->singleton(
 
 $app->configure('app');
 $app->configure('swagger-lume');
+$app->configure('swoole_http');
 
 /*
 |--------------------------------------------------------------------------
@@ -94,6 +95,7 @@ $app->routeMiddleware([
 */
 
 $app->register(\SwaggerLume\ServiceProvider::class);
+$app->register(SwooleTW\Http\LumenServiceProvider::class);
 
 
 // $app->register(App\Providers\AppServiceProvider::class);
