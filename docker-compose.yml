@@ -14,7 +14,6 @@ services:
       - DATABASE_URL=postgres://postgres:postgres@db:5432/shop
       - APP_ENV=local
       - APP_DEBUG=true
-      - CORPORATE=http://localhost:8080
 
   db:
     image: postgres:12.2
