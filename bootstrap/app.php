@@ -62,6 +62,7 @@ $app->singleton(
 $app->configure('app');
 $app->configure('swagger-lume');
 $app->configure('swoole_http');
+$app->configure('filesystems');
 
 /*
 |--------------------------------------------------------------------------

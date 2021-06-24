@@ -10,20 +10,18 @@ trait ImageTrait
     /**
      * Uploads image to the storage and returns it's path.
      *
-     * @param string $entity
      * @param UploadedFile|null $requestFile
      * @return string|null
      */
-    public function store(string $entity, ?UploadedFile $requestFile): ?string
+    public function store(?UploadedFile $requestFile): ?string
     {
         if (!$requestFile) {
             return null;
         }
 
-        $imagePath = $requestFile->store("public/files/$entity");
-        $imageStoragePath = str_replace('public', 'storage', $imagePath);
-        $appURL = env('APP_URL');
-        return $appURL . $imageStoragePath;
+        $imagePath = Storage::disk('s3')->putFile('uploads', $requestFile, 'public');
+
+        return Storage::disk('s3')->url($imagePath);
     }
 
     /**
@@ -35,9 +33,7 @@ trait ImageTrait
     public function remove(?string $imagePath): void
     {
         if ($imagePath) {
-            $appStorageURL = env('APP_URL') . 'storage';
-            $imageStorageURL = str_replace($appStorageURL, '', $imagePath);
-            Storage::delete('public' . $imageStorageURL);
+            Storage::disk('s3')->delete(explode('.com/', $imagePath)[1]);
         }
     }
 }

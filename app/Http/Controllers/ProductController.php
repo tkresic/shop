@@ -4,15 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Repositories\ProductRepository;
+use App\Traits\ImageTrait;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\ValidationException;
 use Laravel\Lumen\Http\ResponseFactory;
 
 class ProductController extends Controller
 {
+    use ImageTrait;
+
     private ProductRepository $productRepository;
 
     public function __construct(ProductRepository $productRepository)
@@ -75,16 +77,9 @@ class ProductController extends Controller
 
         $data = $request->all();
 
-        if (!$request->hasFile('file')) {
-            $data['image'] = url('/') . '/storage/images/Placeholder.png';
-        } else {
-            $imagePath = $request->file('file')->store('public/images');
-            $imageStoragePath = str_replace('public', '/storage', $imagePath);
-            $appURL = env('APP_URL');
-            $imagePath = $appURL . $imageStoragePath;
-            $data['image'] = $imagePath;
-        }
+        $imagePath = $this->store($request->file('file'));
 
+        $data['image'] = $request->hasFile('file') ? $imagePath : 'http://admin.requiro.info/storage/images/Placeholder.png';
         $data['tax']['id'] = (int) $data['tax']['id'];
         $data['tax']['amount'] = (int) $data['tax']['amount'];
 
@@ -114,17 +109,11 @@ class ProductController extends Controller
 
         $data = $request->all();
 
-        if ($request->hasFile('file')) {
-            $imagePath = $request->file('file')->store('public/images');
-            $imageStoragePath = str_replace('public', '/storage', $imagePath);
-            $appURL = env('APP_URL');
-            $imagePath = $appURL . $imageStoragePath;
-            $data['image'] = $imagePath;
+        $imagePath = $this->store($request->file('file'));
 
-            if ($product->image && strpos($product->image, 'Placeholder.png') === false) {
-                $arr = explode('storage', $product->image);
-                Storage::delete('public' . $arr[1]);
-            }
+        if ($imagePath) {
+            $data = array_merge($data, ['image' => $imagePath]);
+            $this->remove($product->image);
         }
 
         $data['tax']['id'] = (int) $data['tax']['id'];
@@ -145,10 +134,7 @@ class ProductController extends Controller
     {
         $product = $this->productRepository->find($id);
 
-        if ($product->image && strpos($product->image, 'Placeholder.png') === false) {
-            $arr = explode('storage', $product->image);
-            Storage::delete('public' . $arr[1]);
-        }
+        $this->remove($product->image);
 
         if ($product == null) {
             return response()->json(false, Response::HTTP_NOT_FOUND);
