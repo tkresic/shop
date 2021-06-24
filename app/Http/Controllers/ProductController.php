@@ -75,15 +75,15 @@ class ProductController extends Controller
 
         $data = $request->all();
 
-        if (!$request->hasFile('file')) {
-            $data['image'] = url('/') . '/storage/images/Placeholder.png';
-        } else {
-            $imagePath = $request->file('file')->store('public/images');
-            $imageStoragePath = str_replace('public', '/storage', $imagePath);
-            $appURL = env('APP_URL');
-            $imagePath = $appURL . $imageStoragePath;
-            $data['image'] = $imagePath;
-        }
+//        if (!$request->hasFile('file')) {
+            $data['image'] = url('/') . '/images/Placeholder.png';
+//        } else {
+//            $imagePath = $request->file('file')->store('public/images');
+//            $imageStoragePath = str_replace('public', '/storage', $imagePath);
+//            $appURL = env('APP_URL');
+//            $imagePath = $appURL . $imageStoragePath;
+//            $data['image'] = $imagePath;
+//        }
 
         $data['tax']['id'] = (int) $data['tax']['id'];
         $data['tax']['amount'] = (int) $data['tax']['amount'];
@@ -114,18 +114,18 @@ class ProductController extends Controller
 
         $data = $request->all();
 
-        if ($request->hasFile('file')) {
-            $imagePath = $request->file('file')->store('public/images');
-            $imageStoragePath = str_replace('public', '/storage', $imagePath);
-            $appURL = env('APP_URL');
-            $imagePath = $appURL . $imageStoragePath;
-            $data['image'] = $imagePath;
-
-            if ($product->image && strpos($product->image, 'Placeholder.png') === false) {
-                $arr = explode('storage', $product->image);
-                Storage::delete('public' . $arr[1]);
-            }
-        }
+//        if ($request->hasFile('file')) {
+//            $imagePath = $request->file('file')->store('public/images');
+//            $imageStoragePath = str_replace('public', '/storage', $imagePath);
+//            $appURL = env('APP_URL');
+//            $imagePath = $appURL . $imageStoragePath;
+//            $data['image'] = $imagePath;
+//
+//            if ($product->image && strpos($product->image, 'Placeholder.png') === false) {
+//                $arr = explode('storage', $product->image);
+//                Storage::delete('public' . $arr[1]);
+//            }
+//        }
 
         $data['tax']['id'] = (int) $data['tax']['id'];
         $data['tax']['amount'] = (int) $data['tax']['amount'];
@@ -145,11 +145,10 @@ class ProductController extends Controller
     {
         $product = $this->productRepository->find($id);
 
-
-        if ($product->image && strpos($product->image, 'Placeholder.png') === false) {
-            $arr = explode('storage', $product->image);
-            Storage::delete('public' . $arr[1]);
-        }
+//        if ($product->image && strpos($product->image, 'Placeholder.png') === false) {
+//            $arr = explode('storage', $product->image);
+//            Storage::delete('public' . $arr[1]);
+//        }
 
         if ($product == null) {
             return response()->json(false, Response::HTTP_NOT_FOUND);
