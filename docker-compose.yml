@@ -11,18 +11,18 @@ services:
     environment:
       - SWOOLE_HTTP_HOST=0.0.0.0
       - SWOOLE_HTTP_PORT=80
-      - DATABASE_URL=postgres://postgres:postgres@db:5432/shop
+      - DATABASE_URL=postgres://postgres:postgres@shop_db:5432/shop
       - APP_ENV=local
       - APP_DEBUG=true
 
-  db:
+  shop_db:
     image: postgres:12.2
     restart: always
     environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: shop
     volumes:
-      - data:/var/lib/postgresql/data
+      - data:/var/lib/postgresql/shopdata
 
 volumes:
   data:
