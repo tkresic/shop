@@ -42,17 +42,17 @@ class ProductController extends Controller
 
         $products = Product::with('subcategory.category')
             ->when($search && strlen($search), function ($query) use ($search) {
-                $query->where('name', 'LIKE', "%$search%")
-                ->orWhere('sku', 'LIKE', "%$search%")
-                ->orWhere('price', 'LIKE', "%$search%")
+                $query->where('name', 'ILIKE', "%$search%")
+                ->orWhere('sku', 'ILIKE', "%$search%")
+                ->orWhere('price', 'ILIKE', "%$search%")
                 ->orWhere(function($query) use ($search) {
                     $query->whereHas('subcategory', function ($query) use ($search) {
-                        $query->where('name', 'LIKE', "%$search%");
+                        $query->where('name', 'ILIKE', "%$search%");
                     });
                 })
                 ->orWhere(function($query) use ($search) {
                     $query->whereHas('subcategory.category', function ($query) use ($search) {
-                        $query->where('name', 'LIKE', "%$search%");
+                        $query->where('name', 'ILIKE', "%$search%");
                     });
                 });
             })
