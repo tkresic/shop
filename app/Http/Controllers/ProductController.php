@@ -113,7 +113,9 @@ class ProductController extends Controller
 
         if ($imagePath) {
             $data = array_merge($data, ['image' => $imagePath]);
-            $this->remove($product->image);
+            if ($product->image && strpos($product->image, 'admin.requiro.info') === false) {
+                $this->remove($product->image);
+            }
         }
 
         $data['tax']['id'] = (int) $data['tax']['id'];
@@ -134,7 +136,9 @@ class ProductController extends Controller
     {
         $product = $this->productRepository->find($id);
 
-        $this->remove($product->image);
+        if ($product->image && strpos($product->image, 'admin.requiro.info') === false) {
+            $this->remove($product->image);
+        }
 
         if ($product == null) {
             return response()->json(false, Response::HTTP_NOT_FOUND);
