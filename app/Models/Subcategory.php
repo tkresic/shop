@@ -13,7 +13,7 @@ class Subcategory extends Model
      *
      * @var array
      */
-    protected $fillable = ['category_id', 'name'];
+    protected $fillable = ['category_id', 'name', 'active'];
 
     /**
      * The attributes which are excluded from every query.

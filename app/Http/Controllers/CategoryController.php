@@ -105,6 +105,7 @@ class CategoryController extends Controller
     {
         $rules = [
             'name' => "required|string|max:255|unique:categories,name,$id",
+            'active' => 'required|boolean',
         ];
 
 

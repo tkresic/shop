@@ -12,7 +12,7 @@ class Product extends Model
      *
      * @var array
      */
-    protected $fillable = ['subcategory_id', 'tax', 'name', 'price', 'cost', 'sku', 'image'];
+    protected $fillable = ['subcategory_id', 'active', 'tax', 'name', 'price', 'cost', 'sku', 'image'];
 
     /**
      * The attributes which are excluded from every query.

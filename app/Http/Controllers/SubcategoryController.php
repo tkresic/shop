@@ -106,6 +106,7 @@ class SubcategoryController extends Controller
         $rules = [
             'name' => "required|string|max:255|unique:subcategories,name,$id",
             'category_id' => 'required|integer|exists:categories,id',
+            'active' => 'required|boolean',
         ];
 
         $this->validate($request, $rules);

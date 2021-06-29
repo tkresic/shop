@@ -162,6 +162,7 @@ class ProductController extends Controller
             'name' => "required|string|max:255|unique:products,name," . $id,
             'sku' => "required|string|unique:products,sku," . $id,
             'subcategory_id' => 'required|integer|exists:subcategories,id',
+            'active' => 'required|boolean',
             'tax' => 'required|array',
             'tax.id' => 'required|integer',
             'tax.name' => 'required|string|max:255',

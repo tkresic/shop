@@ -25,7 +25,14 @@ class DashboardController extends Controller
      */
     public function index(): Response
     {
-        $products = Product::get()
+        $products = Product::whereActive(true)
+            ->whereHas('subcategory', function ($query) {
+               $query->whereActive(true)
+               ->whereHas('category', function ($query) {
+                   $query->whereActive(true);
+               });
+            })
+            ->get()
             ->groupBy('subcategory.category.name')
             ->transform(function ($product) {
                 return $product->groupBy('subcategory.name');
